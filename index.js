@@ -1,14 +1,4 @@
-const express = require('express')
-const app = express()
-const port = 3000
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+require('./keep_alive')();
 
 const { DisTube } = require('distube')
 const Discord = require('discord.js')
@@ -129,4 +119,4 @@ client.distube
 // )
 // .on("searchDone", () => {})
 
-client.login(process.env.TOKEN)
+client.login(process.env.token)
